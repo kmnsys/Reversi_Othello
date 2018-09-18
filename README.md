@@ -1,2 +1,2 @@
 # Reversi_Othello
-Pngs are fromhttps://pngtree.com/
+Pngs are from https://pngtree.com/
