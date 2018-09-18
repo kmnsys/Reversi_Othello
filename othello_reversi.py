@@ -49,7 +49,7 @@ class MainWindow(QMainWindow):
         self.show()
 
     def openUrl(self):
-        url = QUrl("https://github.com/kmnsys/Reversi-Othello")
+        url = QUrl("https://github.com/kmnsys/Reversi_Othello")
         if not QDesktopServices.openUrl(url):
             QMessageBox.warning(self, 'Open Url', 'Could not Open Url')
 
@@ -188,10 +188,10 @@ class Reversi(QWidget):
                                               border-color: beige 
                                               """)
                 if (m, n) == (3, 4) or (m, n) == (4, 3):
-                    self.buttons[m][n].setIcon(QIcon("images/black.png"))
+                    self.buttons[m][n].setIcon(QIcon("black.png"))
                     self.buttons[m][n].setIconSize(QSize(48, 48))
                 elif (m, n) == (3, 3) or (m, n) == (4, 4):
-                    self.buttons[m][n].setIcon(QIcon("images/white.png"))
+                    self.buttons[m][n].setIcon(QIcon("white.png"))
                     self.buttons[m][n].setIconSize(QSize(48, 48))
                 else:
                     self.zeroColTab.append((j, i))
@@ -231,7 +231,7 @@ class Reversi(QWidget):
             pcy = self.placeinList(sx)[1]
 
             if self.wbTurn == 2:
-                sender.setIcon(QIcon("images/white.png"))
+                sender.setIcon(QIcon("white.png"))
                 sender.setIconSize(QSize(48, 48))
                 self.colorTable[pcx][pcy] = 2
                 self.turn.setText("SİYAH")
@@ -248,12 +248,12 @@ class Reversi(QWidget):
                         for k in range(j):
                             pcx = pcx + addx
                             pcy = pcy + addy
-                            self.buttons[pcx][pcy].setIcon(QIcon("images/white.png"))
+                            self.buttons[pcx][pcy].setIcon(QIcon("white.png"))
                             self.buttons[pcx][pcy].setIconSize(QSize(48, 48))
                             self.colorTable[pcx][pcy] = 2
 
             elif self.wbTurn == 1:
-                sender.setIcon(QIcon("images/black.png"))
+                sender.setIcon(QIcon("black.png"))
                 sender.setIconSize(QSize(48, 48))
                 self.colorTable[pcx][pcy] = 1
                 self.turn.setText("BEYAZ")
@@ -270,7 +270,7 @@ class Reversi(QWidget):
                         for k in range(j):
                             pcx = pcx + addx
                             pcy = pcy + addy
-                            self.buttons[pcx][pcy].setIcon(QIcon("images/black.png"))
+                            self.buttons[pcx][pcy].setIcon(QIcon("black.png"))
                             self.buttons[pcx][pcy].setIconSize(QSize(48, 48))
                             self.colorTable[pcx][pcy] = 1
 
@@ -292,7 +292,7 @@ class Reversi(QWidget):
                 indx = self.placeinList(tableCoords.index(i))[0]
                 indy = self.placeinList(tableCoords.index(i))[1]
 
-                self.buttons[indx][indy].setIcon(QIcon("images/avs.png"))
+                self.buttons[indx][indy].setIcon(QIcon("avs.png"))
                 self.buttons[indx][indy].setIconSize(QSize(32, 32))
 
                 self.clickables.append(i)
