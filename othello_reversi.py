@@ -154,7 +154,6 @@ class Reversi(QWidget):
         self.lists()
         self.table()
         self.score()
-        self.gameOver()
 
     def lists(self):
         self.colorTable = [[] for i in range(8)]
@@ -202,7 +201,6 @@ class Reversi(QWidget):
                     n = -1
                 n += 1
         self.clickableButtons()
-
 
     def ifNearButton(self, crdnt):
         nearButtons = []
