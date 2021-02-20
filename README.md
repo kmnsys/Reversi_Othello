@@ -3,3 +3,4 @@
 #It is played with two person.
 #There is not computer play option for now. 
 #Pngs are from https://pngtree.com/
+![screenshot](https://github.com/kmnsys/Reversi_Othello/blob/master/ReversiScreenShot.PNG)
